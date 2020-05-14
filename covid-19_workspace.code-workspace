@@ -1,7 +1,14 @@
 {
 	"folders": [
 		{
+			"path": ".."
+		},
+		{
+			"name": "Covid19",
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Covid-19"
+	}
 }

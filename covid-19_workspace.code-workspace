@@ -2,10 +2,6 @@
 	"folders": [
 		{
 			"path": ".."
-		},
-		{
-			"name": "Covid19",
-			"path": "."
 		}
 	],
 	"settings": {

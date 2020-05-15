@@ -11,25 +11,20 @@ class insertDataToChart {
 
     addCountries() {
         var countryData = JSON.parse(localStorage.getItem('data1'))
-        var countryFlagAndName = JSON.parse(localStorage.getItem('data2'))
+        
         var counName = Object.keys(countryData);
         var opt = "";
         for (let i = 0; i < counName.length; i++) {
 
-            for (let j = 0; j < countryFlagAndName.length; j++) {
-                if (countryFlagAndName[j].name == counName[i]) {
-                    var selectedName = countryFlagAndName[j].name
-                    var selectedFlag = countryFlagAndName[j].flag
-                }
-            }
-            opt += '<div class="col-2"><img src=' + selectedFlag + ' width=25 height=25>' + selectedName + '  <input type="checkbox" value=' + selectedName + ' name="country" onChange ="addSingleDataChart()"></div>'
+            
+            opt += '<div class="col-2">' + counName[i] + '  <input type="checkbox" value=' + counName[i] + ' name="country" onChange ="addSingleDataChart()"></div>'
 
         }
         document.querySelector("#showAll").innerHTML = opt
 
     }
     addValue() {
-
+        console.log(2);
         var favorite = [];
         $.each($("input[name='country']:checked"), function () {
             favorite.push($(this).val());

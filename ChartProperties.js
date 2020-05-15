@@ -24,6 +24,7 @@ function randomColor() {
 }
 
 function addData(countryName, dataSet) {
+    console.log(4);
     var data12 =
     {
         label: '' + countryName + '',
@@ -50,3 +51,4 @@ function addData(countryName, dataSet) {
     data1.datasets.push(data12)
     myChart.update()
 }
+

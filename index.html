@@ -30,11 +30,14 @@
     </script>
     <div id="form1" class="row">
         <div class="col-2 m-5">
-            <label for="country-choice">Choose a country:</label>
-            <input list="allCountries" id="country-choice" />
-            <datalist id="allCountries">
+            <div id="placeCountries">
 
-            </datalist>
+            </div>
+            <script>
+                $(function () {
+                    $("#placeCountries").load("countries.html");
+                });
+            </script>
             <button onclick="handleform()">Submit</button>
             <img id="indexFlag" src="world.png" height="200" width="300">
             <p>Country :<span id="country"></span></p>

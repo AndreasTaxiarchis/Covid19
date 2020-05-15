@@ -6,7 +6,7 @@ function init($) {
    console.log(passBar);
    
     getDataFromUrl("https://pomber.github.io/covid19/timeseries.json", handleRequest)
-    getDataFromUrl("https://restcountries.eu/rest/v2/all?fields=name;flag", storeData2)
+    // getDataFromUrl("https://restcountries.eu/rest/v2/all?fields=name;flag", storeData2)
 
 
     function handleRequest(data) {
@@ -72,13 +72,13 @@ function getFlagPop(countrySel) {
     document.querySelector("#deathPerMil").innerHTML = ((document.querySelector("#deaths").textContent) * 1000000 / (document.querySelector("#population").textContent)).toFixed(2)
     document.querySelector("#indexFlag").setAttribute('src', countrySel[0].flag)
 }
-function storeData2(varName) {
-    if (localStorage.getItem('data2')) {
-        localStorage.removeItem('data2')
-    }
-    localStorage.setItem('data2', JSON.stringify(varName))
+// function storeData2(varName) {
+//     if (localStorage.getItem('data2')) {
+//         localStorage.removeItem('data2')
+//     }
+//     localStorage.setItem('data2', JSON.stringify(varName))
 
-}
+// }
 function getCountryDataFromLocalStorage(nameOfCountry) {
 
     var cn = JSON.parse(localStorage.getItem('data1'))

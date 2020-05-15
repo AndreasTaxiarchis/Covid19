@@ -4,7 +4,8 @@ function addLabelStringAttr(){
 }
 function addSingleDataChart() {
    
-    myChart.update()
+    console.log(1);
+    
     var pinakas = []
     data1.datasets = []
     var countryDataSet = newChartObject.addValue();
@@ -12,9 +13,10 @@ function addSingleDataChart() {
         pinakas = addConfirmed(countryDataSet[i])      
         addData(countryDataSet[i], pinakas)      
     }
-    
+    myChart.update()
 }
 function addConfirmed(nameOfCou) {
+    
     var adddataConf = [];
     var nameOfCountry = nameOfCou;
     var country1 = countryData;
@@ -24,7 +26,8 @@ function addConfirmed(nameOfCou) {
     for (let q = 0; q < countrySelect1.length; q++) {
         adddataConf.push(countrySelect1[q].confirmed)
     }
-
+console.log(3);
     return adddataConf;
 }
+
 

@@ -1,5 +1,6 @@
 let allData;
 var passBar="";
+let optionsCoun = "";
 jQuery(init);
 function init($) {
     passBar = document.getElementById('menuBar')
@@ -17,15 +18,15 @@ function init($) {
         const all = Object.keys(data);
 
 
-        let options = "";
+        
         for (let i = 0; i < all.length; i++) {
 
             const op = "<option value=" + all[i] + "></option>"
-            options += op;
+            optionsCoun += op;
 
         }
 
-        document.querySelector("#allCountries").innerHTML = options;
+        document.querySelector("#allCountries").innerHTML = optionsCoun;
 
 
 

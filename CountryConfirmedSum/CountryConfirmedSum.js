@@ -2,17 +2,17 @@ function addLabelStringAttr(){
  return 'Confirmed Cases'
 
 }
-function addSingleDataChart() {
+function addSingleDataChart(name) {
    
     console.log(1);
     
     var pinakas = []
-    data1.datasets = []
-    var countryDataSet = newChartObject.addValue();
-    for (i = 0; i < countryDataSet.length; i++) {
-        pinakas = addConfirmed(countryDataSet[i])      
-        addData(countryDataSet[i], pinakas)      
-    }
+   
+    var countryDataSet = name;
+ 
+        pinakas = addConfirmed(countryDataSet);      
+        addData(countryDataSet, pinakas);      
+    
     myChart.update()
 }
 function addConfirmed(nameOfCou) {
@@ -29,5 +29,6 @@ function addConfirmed(nameOfCou) {
 console.log(3);
     return adddataConf;
 }
+
 
 

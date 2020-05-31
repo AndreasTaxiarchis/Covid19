@@ -52,3 +52,4 @@ function addData(countryName, dataSet) {
     myChart.update()
 }
 
+

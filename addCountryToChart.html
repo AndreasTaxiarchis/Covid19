@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="country-choice1">Choose a country:</label>
+    <input list="allCountries1" id="country-choice1"/>
+    <datalist id="allCountries1">
+
+    </datalist>
+    <button onclick="changeAll()">Submitt</button>
+    <script>
+       
+        var addCoun = JSON.parse(localStorage.getItem('data1'));
+        const add = Object.keys(addCoun);
+        for (let i = 0; i < add.length; i++) {
+            let temp = String(`${add[i]}`);
+            let op = "<option value=\"" + temp + "\">";
+            optionsCoun += op;
+
+        }
+        document.querySelector("#allCountries1").innerHTML = optionsCoun;
+        function changeAll(){
+            var sel = document.querySelector('#country-choice1').value;
+            document.querySelector('#selectedCoun').innerHTML +='<div class="d-inline-block bg-warning ml-5 mt-2" style="border: 1px solid black; width: fit-content; height: fit-content; padding: 3px;">'+sel+'</div>';
+            addSingleDataChart(sel);
+        }
+    </script>
+</body>
+
+</html>

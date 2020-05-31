@@ -4,33 +4,11 @@ var options;
 class insertDataToChart {
     constructor() {
 
-        // this.addCountries()
+      
         this.addChart()
 
     }
 
-    // addCountries() {
-    //     var countryData = JSON.parse(localStorage.getItem('data1'))
-        
-    //     var counName = Object.keys(countryData);
-    //     var opt = "";
-    //     for (let i = 0; i < counName.length; i++) {
-
-            
-    //         opt += '<div class="col-2">' + counName[i] + '  <input type="checkbox" value=' + counName[i] + ' name="country" onChange ="addSingleDataChart()"></div>'
-
-    //     }
-    //     document.querySelector("#showAll").innerHTML = opt
-
-    }
-    addValue() {
-        console.log(2);
-        var favorite = [];
-        $.each($("input[name='country']:checked"), function () {
-            favorite.push($(this).val());
-        })
-        return favorite
-    }
 
     addChart() {
         var canvas = document.getElementById("myChart");

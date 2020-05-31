@@ -27,7 +27,7 @@
         document.querySelector("#allCountries1").innerHTML = optionsCoun;
         function changeAll(){
             var sel = document.querySelector('#country-choice1').value;
-            document.querySelector('#selectedCoun').innerHTML +='<div class="d-inline-block bg-warning ml-5 mt-2" style="border: 1px solid black; width: fit-content; height: fit-content; padding: 3px;">'+sel+'</div>';
+            document.querySelector('#selectedCoun').innerHTML +='<div class="d-inline-block bg-warning ml-5 mt-2" style="border: 1px solid black; width: fit-content; height: fit-content; padding: 3px;">'+sel+'<span class="close">x</span></div>';
             addSingleDataChart(sel);
         }
     </script>

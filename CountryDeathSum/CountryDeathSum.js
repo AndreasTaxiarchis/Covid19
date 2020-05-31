@@ -5,14 +5,14 @@ function addLabelStringAttr(){
    }
    function addSingleDataChart() {
       
-       myChart.update()
-       var pinakas = []
-       data1.datasets = []
-       var countryDataSet = newChartObject.addValue();
-       for (i = 0; i < countryDataSet.length; i++) {
-           pinakas = addDeath(countryDataSet[i])      
-           addData(countryDataSet[i], pinakas)      
-       }
+    var pinakas = []
+   
+    var countryDataSet = name;
+ 
+        pinakas = addConfirmed(countryDataSet);      
+        addData(countryDataSet, pinakas);      
+    
+    myChart.update()
        
    }
    function addDeath(nameOfCou) {
